@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as handpose from '@tensorflow-models/handpose';
-import './hands.css';
+import './HandTensorflow.css';
 
 const FingerSkeleton = () => {
   const camera = useRef();
@@ -57,7 +57,7 @@ const FingerSkeleton = () => {
             if (i === 8) {
               // Set circle position using index finger coordinates
               if (circleRef.current) {
-                circleRef.current.style.left = x + 'px';
+                circleRef.current.style.right = x + 'px';
                 circleRef.current.style.top = y + 'px';
               }
             }
