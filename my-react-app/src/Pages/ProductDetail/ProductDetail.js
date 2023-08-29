@@ -2,11 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ProductDetail.css";
 
-import wait from "../../asset/images/sitting.png";
-import me from "../../asset/images/man-standing-with-arms-up.png";
-import sick from "../../asset/images/person-takes-a-hit.png";
-import attack from "../../asset/images/attack.png";
-
 const people = 10;
 
 const ProductDetail = () => {
