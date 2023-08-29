@@ -4,7 +4,7 @@ import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as handpose from '@tensorflow-models/handpose';
 import './HandTensorflow.css';
 
-const FingerSkeleton = () => {
+const HandTensorflow = () => {
   const camera = useRef();
   const canvas = useRef();
   let circleRef = useRef();
@@ -101,4 +101,4 @@ const FingerSkeleton = () => {
   );
 };
 
-export default FingerSkeleton;
+export default HandTensorflow;

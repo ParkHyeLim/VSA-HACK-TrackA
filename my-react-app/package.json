@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@tensorflow-models/handpose": "^0.1.0",
     "@tensorflow-models/mobilenet": "^2.1.1",
     "@tensorflow/tfjs": "^4.10.0",
@@ -15,6 +16,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "recoil": "^0.7.7",
+    "vite": "^4.4.9",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.19"
   },
