@@ -31,7 +31,7 @@ const ProductDetail = () => {
   return (
     <div>
       <div>제품 상세 페이지</div>
-      <Link to="/interface">
+      <Link to="/waiting">
         <button>구매</button>
       </Link>
       <button onClick={() => setPlace(prev => prev - 1)}>더 가까이</button>
