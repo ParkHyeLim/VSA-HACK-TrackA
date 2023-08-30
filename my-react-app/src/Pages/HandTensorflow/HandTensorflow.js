@@ -146,8 +146,9 @@ const HandTensorflow = () => {
   }
 
   return (
-    <div className="logo">
-      <div className="video-container">
+    <div>
+      <div className="logo">
+        <Glassmorphism />
         <video
           autoPlay
           playsInline
@@ -156,6 +157,8 @@ const HandTensorflow = () => {
           className="video"
         ></video>
       </div>
+      
+      
       <div className="circle" ref={circleRef}></div>
     </div>
   );
