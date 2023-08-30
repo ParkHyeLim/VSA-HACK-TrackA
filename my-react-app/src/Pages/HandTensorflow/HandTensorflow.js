@@ -3,20 +3,54 @@ import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as handpose from '@tensorflow-models/handpose';
 import './HandTensorflow.css';
+import socket from "../../utils/socket";
+import { useHistory } from "react-router-dom";
 
 const Glassmorphism = () => {
-
+  const history = useHistory();
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [people, setPeople] = useState(9); // 총인원
-  const [place, setPlace] = useState(9); // 현재 위치
+  const [people, setPeople] = useState(-1); // 총인원
+  const [place, setPlace] = useState(-1); // 현재 위치
+
+  
+  const data = {
+    "userId" : "coco",
+    "message" : "join"
+  }
 
   useEffect(() => {
 
+    // 웹소켓 연결이 열렸을 때
+    socket.addEventListener('connection', (event) => {
+      console.log('WebSocket connection opened:', event);
+      
+      // 메시지 전송 예시
+      socket.send(JSON.stringify({ type: 'message', content: data}));
+    });
+
+    // 웹소켓 메시지를 받았을 때
+    socket.addEventListener('message', (event) => {
+      setPeople(event.data.queueLength);
+      setPlace(event.data.userIndex);
+      console.log('WebSocket message received:', event.data);
+    });
+
+    // 웹소켓 연결이 닫혔을 때
+    socket.addEventListener('close', (event) => {
+      console.log('WebSocket connection closed:', event);
+    });
+
+    // 웹소켓 에러가 발생했을 때
+    socket.addEventListener('error', (event) => {
+      console.error('WebSocket error:', event);
+    });
   }, []);
 
   useEffect(() => {
-
-  }, [place]);
+    if (people === 1 && place === 0){
+      history.push("/payment");
+    }
+  }, [people, place]);
 
   const handleClick = (event) => {
     setIsFullScreen(!isFullScreen);
