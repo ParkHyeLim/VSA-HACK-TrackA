@@ -23,7 +23,7 @@ const ProductDetail = () => {
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', paddingBottom: 20, paddingTop: 20}}>
               <button style={{ padding: 10, paddingLeft: 30, paddingRight: 30, borderRadius: 12, display: 'flex', marginRight: 20}}>장바구니</button>
               <Link to="/waiting">
-                <button style={{ padding: 10, paddingLeft: 30, paddingRight: 30, borderRadius: 12 }}>구매</button>
+                <button style={{ padding: 10, paddingLeft: 30, paddingRight: 30, borderRadius: 12 }}>구매하기</button>
               </Link>
             </div>
 
