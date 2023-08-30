@@ -4,10 +4,8 @@ import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as handpose from '@tensorflow-models/handpose';
 import './HandTensorflow.css';
 import socket from "../../utils/socket";
-import { useHistory } from "react-router-dom";
 
 const Glassmorphism = () => {
-  const history = useHistory();
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [people, setPeople] = useState(-1); // 총인원
   const [place, setPlace] = useState(-1); // 현재 위치
@@ -48,7 +46,7 @@ const Glassmorphism = () => {
 
   useEffect(() => {
     if (people === 1 && place === 0){
-      history.push("/payment");
+      window.location.href = "/payment";
     }
   }, [people, place]);
 
