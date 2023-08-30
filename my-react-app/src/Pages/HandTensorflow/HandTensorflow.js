@@ -70,11 +70,7 @@ const Glassmorphism = () => {
 
   return (
     <div className="card" style={style} onClick={handleClick}>
-      <h1 className={isFullScreen ? 'neonText' : 'text'}>Glassmorphism</h1>
-      <div>
-        <div>총 대기 인원 : {people}</div>
-        <div>현재 나의 위치 : {place} 번째</div>
-      </div>
+      <h1 className={isFullScreen ? 'neonText' : 'text'}>{place} 번째 /총 {people}명</h1>
     </div>
   );
 };
