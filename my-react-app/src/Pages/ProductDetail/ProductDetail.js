@@ -1,45 +1,56 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ProductDetail.css";
-
-const people = 10;
+import chair from "../../assets/chair.jpeg";
 
 const ProductDetail = () => {
-  const [array, setArray] = useState(Array(people).fill(false));
-  const [place, setPlace] = useState(9);
-  const [isSpace, setIsSpace] = useState(true);
-
-  useEffect(() => {
-    const newArray = [...array]
-    newArray[place] = true;
-    setArray(newArray);
-  }, []);
-
-  useEffect(() => {
-    const newArray = [...array]
-    newArray[place+1] = false;
-    newArray[place] = true;
-    setArray(newArray);
-  }, [place]);
-
-  const handleKeyPress = e => {
-    if (e.key === 'Enter') {
-      return setIsSpace((prev) => !prev);
-    }
-  }
 
   return (
+
+
     <div>
-      <div>제품 상세 페이지</div>
-      <Link to="/waiting">
-        <button>구매</button>
-      </Link>
-      <button onClick={() => setPlace(prev => prev - 1)}>더 가까이</button>
-      <button onKeyUp={handleKeyPress} onKeyDown={handleKeyPress}>때리기</button>
-      <div>총 대기 인원 : {people}</div>
-      <div>현재 나의 위치 : {place} 번째</div>
+      <Header />
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <h1 style={{ paddingLeft: 30, paddingBottom: 30 }}>Eames Eiffel Plastic Chair</h1>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <img src={chair} alt="Eames Eiffel Plastic Chair" width={400} />
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingBottom: 50, paddingLeft: 30 }}>
+            <h2>Dimensions: 47cm x 76cm x 40cm</h2>
+            <h2 style={{ paddingBottom: 20 }}>Price: $35.00</h2>
+            <h3>Available in multiple colors</h3>
+            <h3>Materials: Plastic, wood, metal</h3>
+            <h3>Shipping and return policies: ...</h3>
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', paddingBottom: 20, paddingTop: 20}}>
+              <button style={{ padding: 10, paddingLeft: 30, paddingRight: 30, borderRadius: 12, display: 'flex', marginRight: 20}}>장바구니</button>
+              <Link to="/waiting">
+                <button style={{ padding: 10, paddingLeft: 30, paddingRight: 30, borderRadius: 12 }}>구매</button>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
+
   );
 };
 
+
 export default ProductDetail;
+
+export const Header = () => {
+  return (
+    <header style={{ height: 100, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', paddingLeft: 50 }}>
+      <h2>Furniture</h2>
+      <nav>
+        <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex' }}>
+          <li style={{ marginRight: '1rem' }}><a href="/">Home</a></li>
+          <li style={{ marginRight: '1rem' }}><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  );
+};
