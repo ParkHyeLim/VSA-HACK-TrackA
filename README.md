@@ -19,7 +19,7 @@ Interactive 대기 시스템
 - Back -  NodeJs, WebSocket
 - Server - Aws, Redis
 
-> **구현 내용 :**
+> **구현 내용**
 - Front - 대기화면에서 AI를 활용하여 마우스나 사용자의 모션을 인식하여 화면에 효과 부여
 - Back - 사용자 접속 시 접속 중인 이용자 수를 비교하여 필요할 경우에 대기열 등록, 웹 소켓을 활용하여 실시간으로 줄어드는 대기자 수가 화면에 반영될 수 있게 구현
 
@@ -37,4 +37,9 @@ Interactive 대기 시스템
     - 해당 페이지에서 추후 사용자에게 실제 제공할 인터페이스를 사용자에서 미리 시범 운영해 볼 수 있음
 
 # 5. 스크린샷
-https://www.notion.so/pathfindercamp/CoCo-583488d89dcd4c18bb16afc5ba67e33c?pvs=4#093da7833c714c379e79d79f58c05afa
+![image](https://github.com/ParkHyeLim/VSA-HACK-TrackA/assets/127061457/af1463c4-8c31-45a8-ad0f-61156a2c1f10)
+
+![image](https://github.com/ParkHyeLim/VSA-HACK-TrackA/assets/127061457/a6889b5a-7e6b-4664-9083-fe1330d12d41)
+
+![image](https://github.com/ParkHyeLim/VSA-HACK-TrackA/assets/127061457/b4d33016-b681-4487-9569-9973ffc5cb3f)
+
