@@ -15,19 +15,15 @@ Interactive 대기 시스템
 # 3. 세부 내용
 
 > **사용 기술**
-> - Front - React
-> - Back -  NodeJs, WebSocket
-> - Server - Aws, Redis
+- Front - React
+- Back -  NodeJs, WebSocket
+- Server - Aws, Redis
 
 > **구현 내용 :**
-> - Front - 대기화면에서 AI를 활용하여 마우스나 사용자의 모션을 인식하여 화면에 효과 부여
-> - Back - 사용자 접속 시 접속 중인 이용자 수를 비교하여 필요할 경우에 대기열 등록, 웹 소켓을 활용하여 실시간으로 줄어드는 대기자 수가 화면에 반영될 수 있게 구현
+- Front - 대기화면에서 AI를 활용하여 마우스나 사용자의 모션을 인식하여 화면에 효과 부여
+- Back - 사용자 접속 시 접속 중인 이용자 수를 비교하여 필요할 경우에 대기열 등록, 웹 소켓을 활용하여 실시간으로 줄어드는 대기자 수가 화면에 반영될 수 있게 구현
 
 # 4. 기대 효과
-
-서비스를 **통해 얻을 수 이점, 발전 방향성 등을 알려주세요.**
-
----
 
 ### 이점
 
@@ -41,13 +37,4 @@ Interactive 대기 시스템
     - 해당 페이지에서 추후 사용자에게 실제 제공할 인터페이스를 사용자에서 미리 시범 운영해 볼 수 있음
 
 # 5. 스크린샷
-
----
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9618703-706d-45d1-83b6-a9462a5e42bf/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd2d5f6a-dc1b-43cc-8a1e-2d31ed895178/Untitled.png)
-
-![스크린샷 2023-08-30 오전 11.48.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fae5a601-7877-4c59-99e3-ffd82fa0e9a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-30_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.48.59.png)
-
-![스크린샷 2023-08-30 오전 11.49.10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d668056-54b4-4a6b-9c14-75fc60da9c1f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-30_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.49.10.png)
+https://www.notion.so/pathfindercamp/CoCo-583488d89dcd4c18bb16afc5ba67e33c?pvs=4#093da7833c714c379e79d79f58c05afa
